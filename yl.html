@@ -1,0 +1,27 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>java selenide check</title>
+	<script>
+
+		window.onload = function () {
+			document.getElementById("submitButton").addEventListener("click", function (){
+				let box1 = document.getElementById("box1").value
+				let box2 = document.getElementById("box2").value
+				vastus = box1 * box2
+				let insert = document.getElementById("vastus")
+				insert.innerHTML = vastus
+			})
+		}
+	</script>
+</head>
+
+<body>
+  <input type="number" id="box1"></input>
+  <input type="number" id="box2"></input>
+  <input type="submit" id="submitButton"></input>
+  <div id="vastus"></div>
+</body>
+</html>
