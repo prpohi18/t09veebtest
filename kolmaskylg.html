@@ -1,0 +1,38 @@
+<doctype html>
+  <html>
+  <head>
+  <title>Kolmnurga kolmanda külje leidmine</title>
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1251">
+  <script language="JavaScript">
+
+
+  function degToRad (deg) { return deg / 180 * Math.PI; }
+
+  function side3(a,b,c)
+  { d=Math.sqrt(a**2+b**2-(2*a*b*Math.cos(degToRad(c))))
+    document.getElementById('vastus').innerHTML=(d)
+    return d
+  }
+  //-->
+  </script>
+  </head>
+  <body>
+  <img src="17.gif" /><br/>
+  <FORM name="form1">
+  <b > AC pikkus </b>
+          <input type="text" size=10 name="str1">
+  <hr>
+  <b> CB pikkus </b>
+          <input type="text" size=10 name="str2">
+  <hr>
+  <b> C nurk </b>
+          <input type="text" size=10 name="str3">
+  <hr>
+  <input type="button" id="submit" value=Arvuta
+  onClick="side3(form1.str1.value,form1.str2.value, form1.str3.value)">
+  </FORM>
+  <div id="vastus" ></div>
+
+
+  </body>
+  </html>
