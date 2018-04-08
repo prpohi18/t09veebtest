@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Teisendus</title>
+        <meta charset="UTF-8">
+        
+        <script>
+				
+		function CelsiusToFahrenheit() {
+			let celsius = document.getElementById("celsius").value
+			let fahrenheit = celsius * 1.8 + 32;
+			document.getElementById("vastus").innerHTML=fahrenheit;
+			document.getElementById("celsius").value="0";
+        
+		}
+
+    
+		function KelvinToCelsius() {
+			let kelvin = document.getElementById("kelvin").value
+			let celsius = kelvin -273.15;
+			document.getElementById("vastus").innerHTML=celsius;
+			document.getElementById("kelvin").value="0";
+		}
+                        
+        </script>  
+		
+    </head>
+    <body>
+        <div>Teisendus</div>
+        <p>Arvuta Celsius fahrenheitideks</p>
+        Celsius<input type="number" id="celsius"/>
+		<input id="celsiusbtn" type="button" value="Leia Fahrenheit" onclick="CelsiusToFahrenheit()"/>
+		
+		<p>Arvuta Kelvin celsiuseks</p>
+        Kelvin<input type="number" id="kelvin"/>
+		<input id="kelvinbtn" type="button" value="Leia Celsius" onclick="KelvinToCelsius()"/><br>        
+        <div id="vastus"></div>
+		
+		
+        
+        
+   
+
+    </body>
+</html>
