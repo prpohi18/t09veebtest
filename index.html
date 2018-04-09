@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Üli äge hex kalku</title>
+        <script>
+            function  calculate() {
+                let number = document.querySelector("#numberbox").value
+                let answer = ""
+                let remainder = 0
+                const hex = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F']
+                
+                while (number > 0) {
+                    remainder = parseInt(number) % 16
+                    answer = (hex[remainder] + answer)
+                    number =  parseInt(number) / 16
+                }
+                answer = answer.slice(1)
+                document.querySelector("#answer").innerHTML = answer
+            }
+        </script>
+    </head>
+    <body>
+        <input type="number" placeholder="Sisesta arv" id="numberbox" />
+        <button onclick="calculate()" id="calculatebutton" >Arvuta</button>
+        <br>
+        Vastus: <span id="answer"></span>
+    </body>
+</html>
