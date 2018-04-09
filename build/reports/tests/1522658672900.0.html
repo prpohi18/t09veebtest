@@ -1,0 +1,20 @@
+<html><head>
+<script>
+function multiply(){
+var a,b,c;
+a=Number(document.getElementById("kylg1").value);
+b=Number(document.getElementById("kylg2").value);
+c= a * b;
+document.getElementById("vastus").value= c;
+}
+</script>
+</head>
+<body>
+<div align="center">
+Sisesta kĆ¼lg 1: <input id="kylg1" placeholder="KĆ¼lg 1" style="" type="number"><br><br>
+Sisesta kĆ¼lg 2: <input id="kylg2" placeholder="KĆ¼lg 2" style="" type="number"><br><br>
+<button onclick="multiply()">Arvuta</button><br><br>
+<input id="vastus" placeholder="Pindala">
+</div>
+
+</body></html>

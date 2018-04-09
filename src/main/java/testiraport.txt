@@ -1,0 +1,21 @@
+Test käivitati: Sun Apr 08 23:17:36 EEST 2018
+
+Korrapärase silindri ruumala kalkulaatori TEST
+
+Lähteandmed:
+r = 3
+h = 4
+
+Oodatav tulemus: 113.09733552923255
+Saadud tulemus: 113.09733552923255
+Tulemus ÕIGE
+
+Korrapärase tetraeedri ruumala kalkulaatori TEST
+
+Lähteandmed:
+a = 5
+
+Oodatav tulemus: 14.731391274719742
+Saadud tulemus: 14.731391274719742
+Tulemus ÕIGE
+
