@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Teisendus</title>
+        <meta charset="UTF-8">
+        
+        <script>
+				
+		function LkToPk() {
+			let lkvon = document.getElementById("lkvon").value
+			let pkvon = lkvon * 1.188323;
+			document.getElementById("vastus").innerHTML=pkvon;
+			document.getElementById("lkvon").value="0";
+        
+		}
+    
+		function PkToLk() {
+			let pkvon = document.getElementById("pkvon").value
+			let lkvon = pkvon * 0.841523;
+			document.getElementById("vastus").innerHTML=lkvon;
+			document.getElementById("pkvon").value="0";
+		}
+                        
+        </script>  
+		
+    </head>
+    <body>
+        <div>Kimi kalkulaator</div>
+		<img src="kim.jpg" height="250" width="400">
+        <p>Lõuna Korea Von -> Põhja Korea Von</p>
+        LK von<input type="number" id="lkvon"/>
+		<input id="lkvonbtn" type="button" value="Leia PKvon" onclick="LkToPk()"/>
+		
+		<p>Põhja Korea Von -> Lõuna Korea Von</p>
+        PK von<input type="number" id="pkvon"/>
+		<input id="pkvonbtn" type="button" value="Leia LKvon" onclick="PkToLk()"/><br>        
+        <div id="vastus"></div>
+		
+		
+        <!--http://www.tlu.ee/~janilv/veeb1/konverter/konverter.html-->
+        
+   
+
+    </body>
+</html>
