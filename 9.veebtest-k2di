@@ -50,6 +50,7 @@
 </html>
 
 // TEST
+//FAILID, MILLEL ON ID HTML FAILIL EES, VAJAB ENDA ETTE #
 
 package com.mycompany.selenide1;
 
@@ -60,20 +61,20 @@ import org.openqa.selenium.By;
 public class Proov2 {
 	public static void main (String[] args){
 		open("http://www.tlu.ee/~k2di/KATSE-POHIKURSUS/9veebtest/html/arvutus1.html");
-		$("kast1").setValue("8");
-		$("kast2").setValue("10");
-		$("nupp1").click();
+		$("#kast1").setValue("8");
+		$("#kast2").setValue("10");
+		$("#nupp1").click();
 		System.out.println($("#vastus").getText());
 		
-		$("kast3").setValue("3");
-		$("kast4").setValue("9");
-		$("nupp2").click();
+		$("#kast3").setValue("3");
+		$("#kast4").setValue("9");
+		$("#nupp2").click();
 		System.out.println($("#vastus2").getText());
 		
-		$("kast5").setValue("200");
-		$("kast6").setValue("25");
-		$("kast7").setValue("45");
-		$("nupp3").click();
+		$("#kast5").setValue("200");
+		$("#kast6").setValue("25");
+		$("#kast7").setValue("45");
+		$("#nupp3").click();
 		System.out.println($("#vastus3").getText());
 	}
 }
