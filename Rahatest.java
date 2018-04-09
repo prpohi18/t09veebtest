@@ -7,7 +7,7 @@ import org.junit.Test;
 public class Rahatest {
     @Test
     public void RahaTest(){
-        open("http://www.tlu.ee/~ttaevik/teisendus.html");
+        open("http://www.tlu.ee/~janilv/veeb1/konverter/konverter.html");
        
         
         $("#lkvon").setValue("50");
