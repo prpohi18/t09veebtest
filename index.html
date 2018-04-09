@@ -1,0 +1,23 @@
+<html>
+<head>
+	<title>Korrapärase nelinurkse püramiidi ruumala leidmine</title>
+	<script>
+		function calculate(){
+			let pserv = document.querySelector("#pserv").value;
+			let korgus = document.querySelector("#korgus").value;
+			let ruumala = "";
+			
+			ruumala = 1/3 * Math.pow(pserv, 2) * korgus;
+			document.querySelector("#ruumala").innerHTML = ruumala;
+		}
+		
+	</script>
+</head>
+<body>
+<input type="number"  id="pserv"/><br>
+<input type="number"  id="korgus"/><br>
+    <button onclick="calculate()" id="calculatebutton" >Arvuta</button>
+    <br>
+    <div id="ruumala"></div>
+</body>
+</html>
