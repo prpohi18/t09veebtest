@@ -1,0 +1,116 @@
+</head>
+	
+<body>
+    <input id="field1" type="text">
+    <input id="field2" type="text">
+    <input id="field3" type="text">
+    <input id="field4" type="text">
+	
+	<button id="calculate" type="button" onclick="calculate()">=</button>
+	
+	<input id="answer" type="text">
+
+</body>
+
+<script>
+
+window.onload = function () {
+	document.getElementById("answer").style.visibility = "hidden";
+}
+
+function calculate() {
+	document.getElementById("answer").style.visibility = "visible";
+    document.getElementById("answer").value = parseInt(document.getElementById("field1").value)*
+    parseInt(document.getElementById("field4").value)-parseInt(document.getElementById("field2").value)*
+    parseInt(document.getElementById("field3").value);
+}
+
+</script>
+
+<style>
+
+body{
+	background-color: lightgreen;
+}
+
+#field1{
+    height: 35px;
+    width: 35px;
+    text-align: center;
+    background-color: Aquamarine;
+    font-size: 15px;
+}
+
+#field2{
+    height: 35px;
+    width: 35px;
+    text-align: center;
+    background-color: Aquamarine;
+    font-size: 15px;
+}
+
+#field3{
+    height: 35px;
+    width: 35px;
+    text-align: center;
+    background-color: Aquamarine;
+    font-size: 15px;
+	position: relative;
+	top: 50px;
+	left: -85px;
+}
+
+#field4{
+    height: 35px;
+    width: 35px;
+    text-align: center;
+    background-color: Aquamarine;
+    font-size: 15px;
+	position: relative;
+	top: 50px;
+	left: -85px;
+}
+
+#calculate{
+	background-color: green;
+	height: 30px;
+    width: 30px;
+	text-align: center;
+	font-size: 20px;
+	position: relative;
+	top: 24px;
+	left: -80px;
+}
+
+#answer{
+    height: 42px;
+    width: 42px;
+    text-align: center;
+    background-color: Aquamarine;
+    font-size: 25px;
+	position: relative;
+	top: 27px;
+	left: -74px;
+}
+
+</style>
+
+</html>
+
+package tanelesmaspaev;
+
+import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Condition.*;
+import org.openqa.selenium.By;
+
+public class Test1{
+	public static void main(String[] args){
+		open("http://greeny.cs.tlu.ee/~kukltane/Java/Kodut%C3%B6%C3%B6d/t09veebtest/determinant.html");
+		$(By.id("field1")).setValue("5");
+		$(By.id("field2")).setValue("1");
+		$(By.id("field3")).setValue("3");
+		$(By.id("field4")).setValue("2");
+		$("#calculate").click();
+		System.out.println("Vastus: "+$("#answer").getValue());
+	}
+}
