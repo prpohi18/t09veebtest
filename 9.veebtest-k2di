@@ -54,7 +54,7 @@
 package com.mycompany.selenide1;
 
 import static com.codeborne.selenide.Selenide.*;
-import static com codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Condition.*;
 import org.openqa.selenium.By;
 
 public class Proov2 {
