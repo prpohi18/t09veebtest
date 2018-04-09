@@ -1,0 +1,23 @@
+<html>
+<head>
+	<title>Kalkulatsiooni leht</title>
+	<script>
+		function calculate(){
+			let number1 = document.querySelector("#number1").value;
+			let number2 = document.querySelector("#number2").value;
+			let answer = "";
+			
+			answer = number1*number2;
+			document.querySelector("#answer").innerHTML = answer;
+		}
+		
+	</script>
+</head>
+<body>
+<input type="number"  id="number1"/><br>
+<input type="number"  id="number2"/><br>
+    <button onclick="calculate()" id="calculatebutton" >Arvuta</button>
+    <br>
+    <div id="answer"></div>
+</body>
+</html>
