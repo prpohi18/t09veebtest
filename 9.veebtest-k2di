@@ -1,0 +1,80 @@
+//HMTL LEHEKüLG
+
+<!doctype html>
+<html>
+	<head>
+		<title>Ristküliku pindala valem</title>
+		<script>
+			function arvutus(){
+				document.getElementById("vastus").innerHTML=document.getElementById("kast1").value*document.getElementById("kast2").value;
+			}
+			function arvutus2(){
+				document.getElementById("vastus2").innerHTML=document.getElementById("kast3").value*document.getElementById("kast4").value/2;
+			}
+			
+			function arvutus3(){
+				document.getElementById("vastus3").innerHTML=500-(document.getElementById("kast5").value)-(document.getElementById("kast6").value)-(document.getElementById("kast7").value);
+			}
+		</script>
+	</head>
+	<body>
+	<p>Ristküliku pindala valem on S=a*b</p>
+		<p>S - pindala</p>
+		<p>a - pikkus</p>
+		<p>b - laius</p>
+		<p></p>
+		<p>Pindala arvutamine</p>
+		<input type="number" id="kast1"> *
+		<input type="number" id="kast2">
+		<input type="button" id="nupp1" value="=" onclick="arvutus()"/>
+		<div id="vastus"></div>
+	<p>Kolmnurga pindala valem on S = ( a * h ) / 2</p>
+		<p>S - pindala</p>
+		<p>a - alus</p>
+		<p>h - kõrgus</p>
+		<p></p>
+		<p>Pindala arvutamine</p>
+		<input type="number" id="kast3"> * 
+		<input type="number" id="kast4"> / 2
+		<input type="button" id="nupp2" value="=" onclick="arvutus2()"/>
+		<div id="vastus2"></div>
+		
+	<p>Lahutamine 500-st</p>
+		<p></p>
+		<p>500 - </p> <input type="number" id="kast5"> - 
+		<input type="number" id="kast6"> - 
+		<input type="number" id="kast7">
+		<input type="button" id="nupp3" value="=" onclick="arvutus3()"/>
+		<div id="vastus3"></div>
+	</body>
+</html>
+
+// TEST
+//FAILID, MILLEL ON ID HTML FAILIL EES, VAJAB ENDA ETTE #
+
+package com.mycompany.selenide1;
+
+import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Condition.*;
+import org.openqa.selenium.By;
+
+public class Proov2 {
+	public static void main (String[] args){
+		open("http://www.tlu.ee/~k2di/KATSE-POHIKURSUS/9veebtest/html/arvutus1.html");
+		$("#kast1").setValue("8");
+		$("#kast2").setValue("10");
+		$("#nupp1").click();
+		System.out.println($("#vastus").getText());
+		
+		$("#kast3").setValue("3");
+		$("#kast4").setValue("9");
+		$("#nupp2").click();
+		System.out.println($("#vastus2").getText());
+		
+		$("#kast5").setValue("200");
+		$("#kast6").setValue("25");
+		$("#kast7").setValue("45");
+		$("#nupp3").click();
+		System.out.println($("#vastus3").getText());
+	}
+}
