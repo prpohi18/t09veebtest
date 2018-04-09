@@ -1,0 +1,14 @@
+!!!Vastus on  x1 on 5, x2 on 3, õige vastus on 5 ja 3
+!!!Vastus on  x1 on -20, x2 on -25, õige vastus on -20 ja -25
+
+------------------------------------------------------------------------
+BUILD SUCCESS
+------------------------------------------------------------------------
+Total time: 10.505s
+Finished at: Mon Apr 09 09:17:30 EEST 2018
+Final Memory: 7M/155M
+------------------------------------------------------------------------
+
+
+
+http://greeny.cs.tlu.ee/~vaigveli/prpohikodu/t09veebtest/
