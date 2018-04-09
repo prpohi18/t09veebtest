@@ -14,5 +14,10 @@ public class Proov1 {
         $("#box2").setValue("4");
         $("#submitButton").click();
         System.out.println($("#vastus").getText());
+        
+        $("#box1").setValue("7");
+        $("#box2").setValue("4");
+        $("#submitButton").click();
+        System.out.println($("#vastus").getText());
     }
 }
