@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>Pikkused</title>
+        <h2>Keskmised pikkused</h2>
+		<script>
+			let pikkused=[];
+			function lisaPikkused(){
+				pikkused.push(document.getElementById("pikkus").value);
+				pikkusteLoetelu();
+            }
+
+            function pikkusteLoetelu(){
+                let lisaPikkus = "<p id='nimekiri'>";
+                for(let i=0; i<pikkused.length; i++){
+                    lisaPikkus+="<p>"+pikkused[i]+"</p>";
+                }
+                document.getElementById("sisPikkused").innerHTML=lisaPikkus;
+            }
+            
+            function keskminePikkus(){
+                let summa = 0;
+                for(let i=0; i<pikkused.length; i++){
+                    summa += parseInt(pikkused[i]);
+                    console.log(summa);
+                }
+                let keskmine= summa/pikkused.length;
+                console.log(keskmine);
+                document.getElementById("arvutus").innerHTML="Keskmine pikkus on: "+keskmine+ " cm";
+            }
+		</script>
+	</head>
+
+	<body>
+        <p>Sisesta pikkus: </p>
+		<input type = "text" id ="pikkus"/>
+		<input type = "button" id ="uusPikkus" onClick="lisaPikkused()" value="Lisa"/>
+
+		<div id="sisPikkused">
+        </div> 
+        <input type = "button" id ="arvuta" onClick="keskminePikkus()" value="Arvuta"/>
+        <div id="arvutus"></div>
+	</body>
+</html>
