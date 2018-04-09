@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Trapets</title>
+        <script>		
+		function trapetsiPindala(){
+			 var summa = document.getElementById("vastus").innerHTML = parseInt(document.getElementById("alus2").value) + parseInt(document.getElementById("alus1").value);
+			 document.getElementById("vastus").innerHTML = summa/2 * document.getElementById("kõrgus").value; 
+        
+		}
+		
+        </script>  
+		
+    </head>
+    <body>
+        <h1>Trapetsi pindala<h1>
+		<h2>Alus1(cm)<h2>
+		<input type="number" id="alus1"/>
+		<h2>Alus2(cm)<h2>
+		<input id="alus2" type="number"/>
+		<h2>Kõrgus(cm)<h2>
+        <input type="number" id="kõrgus"/>
+		<input id="pindalabtn" type="button" value="Arvuta Pindala" onclick="trapetsiPindala()"/><br>        
+        <div id="vastus"></div>
+		
+		
+        
+        
+   
+
+    </body>
+</html> 
