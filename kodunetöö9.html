@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+	<head>
+		<title>ruumala</title>
+	</head>
+	<meta charset="utf-8" />
+	<script>
+	function ruumala(a,b,c)
+	{ 
+		V=a*b*c
+		document.getElementById('vastus').innerHTML=(V)
+		return V
+   }
+	</script>
+	<body >
+		<h1>risttahuka ruumala</h1>
+		<FORM id="form1">
+			<b> Pikkus </b>
+			<input type="text" size=10 id="pikkus" value = 4 >
+			<br>
+			<b> Laius </b>
+			<input type="text" size=10 id="laius"value = 3 >
+			<br>
+			<b> Kõrgus </b>
+			<input type="text" size=10 id="kõrgus"value = 4 >
+			<br>
+			<input type="button" id="submit" value=Arvuta
+			onClick="ruumala(form1.pikkus.value,form1.laius.value, form1.kõrgus.value)">
+		</FORM>
+		<div id="vastus" ></div>
+	</body>
+</html>
