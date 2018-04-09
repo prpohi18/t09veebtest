@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pindala</title>
+<script>
+function Ristkylikupindala(){
+		document.getElementById("vastus").innerHTML=document.getElementById("kylg1").value*document.getElementById("kylg2").value
+	}
+</script>
+</head>
+<body>
+<p>Sisesta ristküliku küljed:</p>
+
+<form>
+  1: <input type="number" id="kylg1"><br>
+  2: <input type="number" id="kylg2"><br><br>
+  <input type="button" id="nupp1" onclick="Ristkylikupindala()" value="Arvuta">
+  <div id="vastus"></div>
+</form>
+</body>
+</html>
