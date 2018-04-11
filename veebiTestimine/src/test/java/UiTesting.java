@@ -1,0 +1,37 @@
+import org.junit.Test;
+import static org.junit.Assert.*;
+import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Selectors.byText;
+import com.codeborne.selenide.WebDriverRunner;
+import com.sun.java.swing.plaf.windows.resources.windows;
+import org.openqa.selenium.By;
+public class UiTesting {
+    
+    public UiTesting() {
+    }
+    @Test
+    public void opening(){
+        open("http://www.okokaubamaja.ee/");
+        assertEquals(WebDriverRunner.url(), "http://www.okokaubamaja.ee/");
+    }
+    @Test
+    public void loginButtonRedirects(){
+        open("http://www.okokaubamaja.ee/");
+        $("#welcome").click();
+        assertEquals(WebDriverRunner.url(), "http://www.okokaubamaja.ee/et/login");
+    }
+    @Test
+    public void logInAndOutSucceeds(){
+        open("http://www.okokaubamaja.ee/et/login");
+        $(By.name("_u")).setValue("11");
+        $(By.name("_p")).setValue("11");
+        $(By.className("loginBtn")).click();
+        assertEquals(WebDriverRunner.url(), "http://www.okokaubamaja.ee/et/home");
+        $("#welcome").shouldHave(text("Minu konto"));
+        $(By.id("welcome")).hover();
+        $(byText("Logi välja")).click();
+        $("#welcome").shouldHave(text("Logi Sisse"));
+    }
+    
+}
