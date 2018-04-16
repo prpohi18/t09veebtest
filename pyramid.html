@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>p8ramiid</title>
+    <script>
+      function saadaAndmed(){
+        let a,b,c,vastus;
+          a=Number(document.getElementById("kast1").value);
+          b=Number(document.getElementById("kast2").value);
+          c=Number(document.getElementById("kast3").value);
+          vastus = a*b*c/2;
+          document.getElementById("vastus").value=vastus;
+        }
+    </script>
+  </head>
+  <body>
+    <h3>P8ramiidi p6hjapindala arvutamine</h3>
+    <input type="number" id="kast1" placeholder="p6hiserv"> X
+    <input type="number" id="kast2" placeholder="apoteem"> X
+    <input type="number" id="kast3" placeholder="tippude arv"> 
+    <input type="button" id="nupp" value="="  onClick="saadaAndmed()">
+    <input type="number" id="vastus" readonly>
+  </body>
+</html>
