@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kodutoo 9</title>
+    <script>
+    let pikkus = []
+    let summa = 0
+
+    function addPikkus(){
+        var a = parseInt(document.getElementById("arv").value)
+        pikkus.push(a)
+        document.getElementById("showArray").innerHTML = pikkus
+    }
+
+    function keskmine(){
+        for(let i = 0; i<pikkus.length; i++){
+            summa = summa+pikkus[i]
+        }
+        summa = summa/pikkus.length
+        document.getElementById("showKeskmine").innerHTML = summa
+        summa = 0
+        pikkus = []
+    }
+    
+    </script>
+</head>
+<body>
+    <h1>Arvuta keskmine</h1>
+
+    <input type="number" id="arv"/>
+    <input type="button" id="lisaArv" onclick="addPikkus()" value="Lisa arv"/>
+    <br>
+    <h2 id="showArray"></h2>
+    <br>
+    <input type="button" id="arvutaKeskmine" onclick="keskmine()" value="Arvuta keskmine"/>
+    <br>
+    <h2 id="showKeskmine"></h2>
+</body>
+</html>
