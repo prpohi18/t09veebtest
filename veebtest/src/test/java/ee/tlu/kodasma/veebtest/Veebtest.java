@@ -8,7 +8,7 @@ import static org.junit.Assert.*;
 public class Veebtest {
     @Test
     public void avamine() {
-        open("http://localhost:5555/~kodakevi/2018/progepohi/t09veebtest/veebtest.html");
+        open("http://localhost:5555/~kodakevi/2018/progepohi/t09veebtest/veebtest/src/test/java/ee/tlu/kodasma/veebtest/Veebtest.html");
         $("h1").shouldHave(text("Arvutused"));
         assertEquals("+", $("#liida").getAttribute("innerHTML"));
         assertEquals("-", $("#lahuta").getAttribute("innerHTML"));
@@ -18,7 +18,7 @@ public class Veebtest {
     
     @Test
     public void summa() {
-        open("http://localhost:5555/~kodakevi/2018/progepohi/t09veebtest/veebtest.html");
+        open("http://localhost:5555/~kodakevi/2018/progepohi/t09veebtest/veebtest/src/test/java/ee/tlu/kodasma/veebtest/Veebtest.html");
         $("#num1").setValue("6");
         $("#num2").setValue("3");
         $("#liida").click();
@@ -27,7 +27,7 @@ public class Veebtest {
     
     @Test
     public void vahe() {
-        open("http://localhost:5555/~kodakevi/2018/progepohi/t09veebtest/veebtest.html");
+        open("http://localhost:5555/~kodakevi/2018/progepohi/t09veebtest/veebtest/src/test/java/ee/tlu/kodasma/veebtest/Veebtest.html");
         $("#num1").setValue("6");
         $("#num2").setValue("3");
         $("#lahuta").click();
@@ -36,7 +36,7 @@ public class Veebtest {
     
     @Test
     public void korrutis() {
-        open("http://localhost:5555/~kodakevi/2018/progepohi/t09veebtest/veebtest.html");
+        open("http://localhost:5555/~kodakevi/2018/progepohi/t09veebtest/veebtest/src/test/java/ee/tlu/kodasma/veebtest/Veebtest.html");
         $("#num1").setValue("6");
         $("#num2").setValue("3");
         $("#korruta").click();
@@ -45,7 +45,7 @@ public class Veebtest {
     
     @Test
     public void jagatis() {
-        open("http://localhost:5555/~kodakevi/2018/progepohi/t09veebtest/veebtest.html");
+        open("http://localhost:5555/~kodakevi/2018/progepohi/t09veebtest/veebtest/src/test/java/ee/tlu/kodasma/veebtest/Veebtest.html");
         $("#num1").setValue("6");
         $("#num2").setValue("3");
         $("#jaga").click();
