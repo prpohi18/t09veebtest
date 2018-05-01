@@ -2,10 +2,12 @@ package ee.tlu.kodasma.veebtest;
 
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Condition.*;
+import org.openqa.selenium.By;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class Veebtest {
+    public Veebtest() {}
     @Test
     public void avamine() {
         open("http://localhost:5555/~kodakevi/2018/progepohi/t09veebtest/veebtest/src/test/java/ee/tlu/kodasma/veebtest/Veebtest.html");
