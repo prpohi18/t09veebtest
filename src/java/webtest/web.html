@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ristküliku pindala</title>
+    <script>
+        function calculate() {
+            let n1 = document.querySelector("#n1").value;
+            let n2 = document.querySelector("#n2").value;
+
+            answer = n1*n2;
+            document.querySelector("#answer").innerHTML = answer;
+
+        }
+    </script>
+</head>
+<body>
+<input type="number"  id="n1" title="n1"/><br>
+<input type="number"  id="n2" title="n2"/><br>
+<button onclick="calculate()" id="button" >Arvuta!</button>
+<br>
+<div id="answer"></div>
+</body>
+</html>
