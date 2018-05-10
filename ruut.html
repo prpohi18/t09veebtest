@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ruut</title>
+        <meta charset="UTF-8">
+        <script>
+            window.onload = function () {
+                init()
+            }
+            function init (){
+                window.addEventListener('keypress', kuvaVastusEnteriga)
+
+            }
+
+            function kuvaVastusEnteriga(){
+                if (event.keyCode === 13){
+                    kuvaVastus()
+                }
+            }
+            function kuvaVastus(){ 
+                    let x
+                    x = document.getElementById("kast").value
+                console.log("luls")
+                    if(x !== ""){
+                        document.getElementById("vastus").innerHTML=x*x;
+                    } else {
+                        document.getElementById("vastus").innerHTML="Väli on tühi"
+                    }
+               }
+            
+        </script>
+    </head>
+    <body>
+        <h1>Ruut</h1>
+        <input type="number" id="kast">
+        <span id="vastus">Vastuse koht</span>
+        <button type="button" id="kuvaVastus" onclick="kuvaVastus()">Submit</button>
+    </body>
+</html>
