@@ -1,2 +1,2 @@
-# t11kontrolltoo2 - Veebilehestiku testimine
+# t09veebtest
 link veebilehele http://www.tlu.ee/~shev/javakt2/
