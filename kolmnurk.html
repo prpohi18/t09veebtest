@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Pindala arvutamine</title>
+		<script>
+		function Arvuta(){
+			let korgus = document.querySelector("#pkorgus").value;
+			let alus = document.querySelector("#alus").value;
+			let pindala = "";
+			
+			pindala = alus * korgus / 2;
+			document.querySelector("#Vastus").innerHTML = pindala;
+		}
+		</script>
+	</head>
+	<body>
+		<div>Sisesta täisnurkse kolmnurga kõrgus ja alus:</div></br>
+		Kolmnurga kõrgus: <input type="number" id="korgus" /></br></br>
+		Kolmnurga alus: <input type="number" id="alus" />
+		<input type="submit" id="nupp1" value="Arvuta" onClick="Arvuta()" />
+		</br></br>
+		Vastus: <span id="Vastus"></span>
+	</body>
+</html> 
