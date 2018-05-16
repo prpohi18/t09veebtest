@@ -1,0 +1,24 @@
+ T E S T S
+-------------------------------------------------------
+Running arvutus
+Starting ChromeDriver 2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb) on port 51136
+Only local connections are allowed.
+10
+Pass
+Starting ChromeDriver 2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb) on port 38620
+Only local connections are allowed.
+3
+Pass
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.717 sec
+
+Results :
+
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+
+------------------------------------------------------------------------
+BUILD SUCCESS
+------------------------------------------------------------------------
+Total time: 14.029s
+Finished at: Wed May 16 18:35:19 EEST 2018
+Final Memory: 8M/123M
+---------------

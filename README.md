@@ -1,3 +1,2 @@
-# t09veebtest
-
-Omaloodud arvutav veebileht ning tema töö kontrollimine Java automaattesti(de) abil
+# t11kontrolltoo2 - Veebilehestiku testimine
+link veebilehele http://www.tlu.ee/~shev/javakt2/
