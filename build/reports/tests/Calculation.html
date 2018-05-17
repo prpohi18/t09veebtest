@@ -1,0 +1,23 @@
+<html><head>
+  <meta charset="utf-8">
+  <title>Calculation page</title>
+  <link rel="stylesheet" type="text/css" href="myStyle.css">
+  <script>
+    function calculation() {
+      let nr1 = document.querySelector("#nr1").value;
+      let nr2 = document.querySelector("#nr2").value;
+
+      answer = nr1*nr2;
+      document.querySelector("#answer").innerHTML = answer;
+    }
+  </script>
+</head>
+<body>
+  <span class="text"><label>arv1:</label></span>
+  <input value="" id="nr1" type="number" title="nr1"><br>
+  <span class="text"><label>arv2:</label></span>
+  <input value="" id="nr2" type="number" title="nr2"><br><br>
+  <input value="arvuta" id="calculate" onclick="calculation()"type="button"><br>
+  <span class="answer"><div id="answer"></div></span>	</span>
+</body>
+</html>
