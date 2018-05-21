@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Liitmine</title>
+		<script>
+		
+		function calculate(){
+		
+			var a = Number(document.getElementById("nr1").value);
+			var b = Number(document.getElementById("nr2").value);
+			var ab = a+b;
+			document.getElementById("vastus").value=ab;
+		}
+			
+		</script>
+    </head>
+    <body>
+        <h2>Esimene number</h2>
+		<input id="nr1" type="number" />
+		<h2>Teine number</h2>
+		<input id="nr2" type="number" />
+		<h2>Vastus</h2>
+		<input id="vastus" type="number" />
+		<button id="ansbtn" onclick="calculate()">Vastus</button>
+    </body>
+</html>
