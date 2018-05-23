@@ -1,0 +1,23 @@
+<html>
+<head>
+	<title>Kahe arvu korrutamine </title>
+	<script>
+		function calculate(){
+			let esimene = document.querySelector("#esimene").value;
+			let teine = document.querySelector("#teine").value;
+			let vastus = "";
+			
+			vastus = esimene*teine;
+			document.querySelector("#vastus").innerHTML = vastus;
+		}
+		
+	</script>
+</head>
+<body>
+<input type="number"  id="esimene"/><br>
+<input type="number"  id="teine"/><br>
+    <button onclick="calculate()" id="calculatebutton" >Arvuta</button>
+    <br>
+    <div id="vastus"></div>
+</body>
+</html> 
