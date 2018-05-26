@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Converting</title>
+    <meta charset="UTF-8">
+
+    <style>
+        .result {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <h2>Rubla teisendamine euroks</h2>
+        <label for="ruble">Sisestage palun summa, mida soovite teisendada</label>
+        <input type="text" id="ruble">
+        <button id="ruble-convert-button">Teisenda</button>
+        <div id="result"></div>
+    </div>
+
+    <div>
+        <h2>Euro teisendamine rublaks</h2>
+        <label for="euro">Sisestage palun summa, mida soovite teisendada</label>
+        <input type="text" id="euro">
+        <button id="euro-convert-button">Teisenda</button>
+        <div id="result2"></div>
+    </div>
+
+    <h4>P.S. Valuutakursid on võetud lehelt <a href="https://www.eestipank.ee/valuutakursid"> https://www.eestipank.ee/valuutakursid</a> 16.05. 01:00 seisuga!</h4>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var rubEur = 0.01;
+            var eurRub = 73.82;
+
+            $('button').on('click', function () {
+                var $this = $(this);
+                var $parent = $this.parent();
+                var name = $this.attr('id');
+                var value = $parent.find('input').val();
+
+                if (name === 'ruble-convert-button') {
+                    var result = value * rubEur;
+
+                    $parent.find('#result').html(
+                        '<strong>' + result + ' EUR</strong>' +
+                        '<div>Arvutus teostati kursiga ' + rubEur + '</div>'
+                    );
+
+                } else {
+                    var result2 = (value * eurRub).toFixed(2);
+
+                    $parent.find('#result2').html(
+                        '<strong>' + result2 + ' RUB</strong>' +
+                        '<div>Arvutus teostati kursiga ' + eurRub + '</div>'
+                    );
+                }
+            })
+        });
+    </script>
+
+</body>
+</html>
