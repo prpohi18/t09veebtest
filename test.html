@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ristkulik</title>
+            <script>
+
+            function ristkulik(){
+
+                let a = Number(document.getElementById("a".value));
+                let b = Number(document.getElementById("b".value));
+                let umbermoot = 2 * (a + b);
+                document.getElementById("vastus").value=umbermoot;
+            }
+            
+            </script>
+    </head>
+
+    <body>
+        <h1>Ristkuliku umbermoot<h1>
+            <h2>a kulg<h2>
+            <input id="a" type="number"/>
+            <h2>b kulg<h2>
+            <input id="b" type="number"/>
+
+            <input id="nupp1" type="button" value="Arvuta" onclick="ristkulik()"/><br>        
+            <div id="vastus"></div>
+    </body>
+</html>
