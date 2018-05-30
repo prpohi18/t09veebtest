@@ -1,0 +1,23 @@
+<html><head>
+    <title>Risttahuka pindala arvutamine</title>
+    <script>
+		function pindalaArvutamine(){
+			let a = document.querySelector("#a").value;
+			let b = document.querySelector("#b").value;
+			let c = document.querySelector("#c").value;
+			let vastus = "";
+			vastus = 2*(a*b + b*c + a*c);
+			document.querySelector("#vastus").innerHTML = vastus;
+		}
+    </script>
+  </head>
+  <body>
+	<h2>Risttahuka pindala arvutamine</h2>
+	<input name="a" id="a" placeholder="a" style="" type="number">
+	<input name="b" id="b" placeholder="b" style="" type="number">
+	<input name="c" id="c" placeholder="c" style="" type="number">
+	<button onclick="pindalaArvutamine()" id="submit" value="Arvuta" style="">
+	<div id="vastus">52</div>
+  
+
+</button></body></html>
