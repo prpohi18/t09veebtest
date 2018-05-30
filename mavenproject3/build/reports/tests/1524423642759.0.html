@@ -1,0 +1,24 @@
+<html><head>
+    <title>Risttahuka pindala arvutamine</title>
+    <script>
+		window.onload = function () {
+		document.getElementById("submit").addEventListener("click", function (){
+			let a = document.getElementById("a").value
+			let b = document.getElementById("b").value
+			let c = document.getElementById("c").value
+			vastus = 2*(a*b + b*c + a*c)
+			let answerElement = document.getElementById("ans")
+			answerElement.innerHTML = vastus
+		})
+	}
+    </script>
+  </head>
+  <body>
+	<h2>Risttahuka pindala arvutamine</h2>
+	<input name="a" id="a" placeholder="a" type="text">
+	<input name="b" id="b" placeholder="b" type="text">
+	<input name="c" id="c" placeholder="c" type="text">
+	<input id="submit" value="Arvuta" type="button">
+	<div id="ans"></div>
+  
+</body></html>
