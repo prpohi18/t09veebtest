@@ -1,0 +1,40 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Veebtesti arvutus</title>
+	<script>
+		window.onload = function () {
+			document.getElementById("submitButton").addEventListener("click", function (){
+				let kast1 = document.getElementById("kast1").value
+				let kast2 = document.getElementById("kast2").value
+				let kast3 = document.getElementById("kast3").value
+				diskriminant = (kast2 * kast2) - (4 * kast1 * kast3)
+				let sisend = document.getElementById("diskriminant")
+				let sisendTekst = document.getElementById("vastusTekst")
+				sisend.innerHTML = diskriminant
+
+				if(diskriminant > 0) {
+					sisendTekst.innerHTML = "Võrrandil on kaks reaalarvulist lahendit"
+				}else if(diskriminant == 0){
+					sisendTekst.innerHTML = "Võrrandil on kaks kokkulangevat reaalarvulist lahendit"
+				}else if(diskriminant < 0){
+					sisendTekst.innerHTML = "Reaalarvulised lahendid puuduvad"
+				}else{
+					sisendTekst.innerHTML = "Sisestati valed andmed"
+				}
+			})
+		}
+	</script>
+</head>
+
+<body>
+  <input type="number" id="kast1"></input> x2 +
+	<input type="number" id="kast2"></input> x +
+	<input type="number" id="kast3"></input>
+  <input type="submit" id="submitButton"></input>
+	<div id="diskriminant"></div>
+	<div id="vastusTekst"></div>
+</body>
+</html>
