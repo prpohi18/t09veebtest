@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rakenduse kirjeldus</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      function sisestaArvud(){
+        let s,tippude,vastus;
+        s=Number(document.getElementById("kast1").value);
+        t=Number(document.getElementById("kast2").value);
+        vastus = s/t;
+        document.getElementById("vastus").value=vastus;
+      }
+   </script> 
+    </head>
+    <body>
+        <div>Kiiruse arvutamine, lisa teepikkus meetrites ja aeg sekuntides.</div>
+        <input type ="number" id="kast1" placeholder="teepikkus"> /
+        <input type ="number" id="kast2" placeholder="aeg"> 
+        <input type ="button" id="nupp" value="=" onclick="sisestaArvud()" /> 
+        <input type="number" id="vastus" readonly>
+    </body>
+</html>
