@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>KillDeathRatio arvutamine</title>
+</head>
+<body>
+<form id="kdrForm">
+    <h1>KillDeathRatio arvutamine</h1>
+    <div>
+        <label for="kills">Tapmisi</label>
+        <input type="number" id="kills" />
+    </div>
+    <div>
+        <label for="deaths">Surme</label>
+        <input type="number" id="deaths" />
+    </div>
+    <div>
+        <label for="area">KillDeathRatio</label>
+        <input type="number" id="area" />
+    </div>
+    <div>
+        <input type="button" value="Calculate" id="submit" />
+    </div>
+</form>
+
+</body>
+</html>
+
+
+<script>
+    function kdr() {
+        'use strict';
+        var area;
+        var kills = document.getElementById('kills').value;
+        var deaths = document.getElementById('deaths').value;
+        var total = kills/deaths;
+        document.getElementById('area').value = total;
+        return false;
+    }
+
+    function init() {
+        'use strict';
+        var submit = document.getElementById('submit');
+        submit.onclick = kdr;
+    }
+
+    window.onload = init;
+</script>
