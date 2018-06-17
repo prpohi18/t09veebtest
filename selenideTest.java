@@ -9,10 +9,11 @@ import org.junit.Test;
 
 public class selenideTest {
     @Test
-    public void korrutamineTest(){
+    public void liitmine(){
         open("http://iot.knowbase.ee/veebitest.html");
-        $("#nr1").setValue("12");
-        $("#nr2").setValue("13");
+        $("#nr1").setValue("2");
+        $("#nr2").setValue("3");
+        $("#nr3").setValue("4");
         $("#ansbtn").click();
         System.out.println($("#vastus").getText());
     }
