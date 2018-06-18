@@ -12,8 +12,8 @@ import org.openqa.selenium.By;
 public class veebtest {
     public static void main(String[] args){
         open("http://greeny.cs.tlu.ee/~kaugsilv/proge/kodut%c3%b6%c3%b6d/t09veebtest/nimekiri.html");
-        $("#mark").setValue("Silver");
-        $("#mudel").setValue("Kaugemaa");
+        $("#mark").setValue("Audi");
+        $("#mudel").setValue("a4");
         $("#btn").click();
         $("#auto").shouldHave(text("Audi a4"));    
     }
